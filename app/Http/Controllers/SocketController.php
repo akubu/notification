@@ -48,7 +48,8 @@ class SocketController extends Controller {
 		$message=\GuzzleHttp\json_encode($message);
 		event(new notifications($n));
 		$redis->publish('m', $message);
-
+		
+		
 		//return redirect('/userHome');
 
 	}

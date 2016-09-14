@@ -10,14 +10,23 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::group(['middleware' => 'guest'], function() {
+Route::group(['middleware' => 'redirect'], function() {
    
     Route::get('/', function () {
         return view('welcome');
     });
 });
 
+Route::get('/welcomeError', function () {
+    return view('welcomeError');
+});
+
+Route::get('/clearNotification','notifications@clearNotification');
 Route::get('/logout','Auth\AuthController@logout');
+
+
+Route::get('/loginNotification','notifications@onLogin');
+
 
 Route::get('/userHome','user@index');
 

@@ -23,31 +23,44 @@ redisClient.on("message", function(channel, message) {
   console.log(channel + json.text);
   username=json.uid_source;
   text=json.message;
-  connection.query('INSERT into `notifications`(`uid_source`,`message`) values ("' + json.uid_source + '","' + json.message + '")', function (err, rows, fields) {
-    //console.log('here');
+  json.uid_target.forEach(function (target) {
+    // connection.query('INSERT into `notifications`(`uid_source`,`message`,`uid_target`) values ("' + json.uid_source + '","' + json.message + '","' + target + '")', function (err, rows, fields) {
+      //console.log('here');
 
-    if (err) {
-      console.log(err);
-    }
-    else {
-      connection.query('SELECT `message` FROM `notifications` WHERE uid_source= "'+username+'" ',function (err,results) {
+      // if (err) {
+      //   console.log(err);
+      // }
+      // else {
+        connection.query('SELECT `message`,`type`,`created_at` FROM `notifications` WHERE uid_target= "' + target + '"  AND status="un_read"' , function (err, results) {
 
-        if (err) {
-          console.log(err);
-        }
-        else {
-          var response=JSON.parse('{'+
-            '"message":'+'"'+text+'"'+','+
-            '"count":'+'"'+results.length+'"'+
-          '}');
-          io.emit(username, response);
-        }
+          if (err) {
+            console.log(err);
+          }
+          else {
+            // console.log(JSON.stringify(results[0]).substring(0));
+          var rows="[";
+            var i;
+            for(i=0;i<results.length-1;i++)
+          {
+            rows=rows.concat(JSON.stringify(results[0]).substring(0)+",");
+  }
+            var final=rows.concat(JSON.stringify(results[0]).substring(0)+"]");
+            var response = JSON.parse('{' +
+                '"text":'+final + ',' +
+                '"count":' + '"' + results.length + '"' +
+                '}');
 
-      } );
+            console.log(response.text[0].message);
+            io.emit(target, response);
 
 
+          }
 
-    }
+        });
+
+
+      // }
+    // });
   });
 });
 

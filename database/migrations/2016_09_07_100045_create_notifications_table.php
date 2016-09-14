@@ -20,6 +20,7 @@ class CreateNotificationsTable extends Migration
             $table->string('message');
             $table->string('uid_source');
             $table->string('uid_target');
+            $table->string('status')->default('un_read');
             $table->timestamps();
         });
 

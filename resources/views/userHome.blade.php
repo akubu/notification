@@ -4,6 +4,18 @@
 
 <html>
 <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover{background-color:#f5f5f5}
     ul {
         list-style-type: none;
         margin: 0;
@@ -34,7 +46,7 @@
 <ul >
     <li><a>{{$username}}'s Home Page</a></li>
     <li><a href="/logout">Logout</a></li>
-    <li><a id="n">Notification count:<?php echo Notification::where('uid_source','=',$username)->count() ?></a></li>
+    <li id="not"><a id="n">Notification count:<?php echo Notification::where('uid_target','=',$username)->where('status','=','un_read')->count() ?></a></li>
     <li><a >upload</a></li>
 </ul>
 </div>
@@ -56,6 +68,22 @@
     <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
     <input type="submit" value="send" id="submit">
 
+<div id=>
+
+    <table id="table" hidden>
+        <tr>
+           <th>Notification</th>
+           <th>Type</th>
+           <th>Time</th>
+        </tr>
+
+
+
+    </table>
+
+
+</div>
+
 
 <!--div id="upload">
 <form method="post" action="upload" enctype="multipart/form-data">
@@ -67,27 +95,54 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
-{{--<script src="js/main.js"></script>--}}
+<!--script src="js/main.js"></script-->
 
 <script>
 
     var socket = io.connect('http://localhost:8899');
     var username="<?php echo $username ?>";
-    socket.on(username,function(message){
-        console.log();
-        $('#n').html('Notification count:'+message.count);
+    socket.on(username,function(response){
+        alert( response);
+        var i;
+        for(i=0;i<response.count;i++)
+            $('#table').append('<tr><td>'+ response.text[i].message +'</td>'+'<td>'+ response.text[i].type +'</td>'+'<td>'+ response.text[i].created_at +'</td> </tr>');
+
+
+        $('#n').html('Notification count:'+response.count);
+        $('#not').css("background-color",'#333');
     });
 
     $('#submit').click(function () {
 
         var text = $('#text').val();
         var token = $('#token').val();
+        $('#text').val('');
 
         //$('#graphview').html('<center><img src="./img/loading.gif" height="20%" width="20%"> <br> Loading ... </center>');
 
         $.get("/sendMessage?text=" + text, function (data, status) {
             //
 });
+
+        return true;
+    });
+
+    $('#n').click(function () {
+
+//        var text = $('#text').val();
+//        var token = $('#token').val();
+//        $('#text').val('');
+
+        //$('#graphview').html('<center><img src="./img/loading.gif" height="20%" width="20%"> <br> Loading ... </center>');
+
+        $.get("/clearNotification", function (data, status) {
+            $('#n').html('Notification count: 0');
+            $('#not').css("background-color",'grey');
+            $('#table').show();
+
+
+            //
+        });
 
         return true;
     });

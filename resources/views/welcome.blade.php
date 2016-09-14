@@ -52,6 +52,10 @@
                 <strong><a  id="google" href="social/redirect/google" style=" color: black ;font-size: larger" type="submit">Google</a></strong>
                 {{--<div class="title">Laravel 5</div>--}}
             </div>
+            <span>
+               @yield('error');
+
+            </span>
         </div>
 
 

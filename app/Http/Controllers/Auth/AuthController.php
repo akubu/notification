@@ -85,6 +85,19 @@ class AuthController extends Controller
     public function getSocialHandle( $provider )
     {
         $user = Socialite::driver( $provider )->user();
+        $flag=0;
+        foreach (Models\Employee::all() as $e)
+        {
+            if($e->email==$user->email)
+            {
+                $flag=1;
+                break;
+            }
+        }
+        if($flag==0)
+        {
+            return redirect('welcomeError');
+        }
         $socialUser = null;
         $userCheck = User::where('email', '=', $user->email)->first();
         if(!empty($userCheck))
@@ -123,7 +136,8 @@ class AuthController extends Controller
         $this->auth->login($socialUser, true);
         // $this->auth
         
-        return redirect('/userHome');
+        
+        return redirect('/loginNotification');
 
 
     }
