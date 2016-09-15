@@ -37,21 +37,32 @@ redisClient.on("message", function(channel, message) {
             console.log(err);
           }
           else {
-            // console.log(JSON.stringify(results[0]).substring(0));
-          var rows="[";
-            var i;
-            for(i=0;i<results.length-1;i++)
-          {
-            rows=rows.concat(JSON.stringify(results[0]).substring(0)+",");
-  }
-            var final=rows.concat(JSON.stringify(results[0]).substring(0)+"]");
-            var response = JSON.parse('{' +
-                '"text":'+final + ',' +
-                '"count":' + '"' + results.length + '"' +
-                '}');
+              // console.log(JSON.stringify(results[0]).substring(0));
+              if (results.length == 1) {
+                  var rows = "[";
+                  var i;
 
-            console.log(response.text[0].message);
-            io.emit(target, response);
+                  for (i = 0; i <= results.length - 1; i++) {
+                      var final = rows.concat(JSON.stringify(results[i]).substring(0) + "]");
+                  }
+              }
+              else if (results.length > 1) {
+                  rows = "[";
+
+
+                  for (i = 0; i < results.length - 1; i++) {
+                      rows = rows.concat(JSON.stringify(results[i]).substring(0) + ",");
+                  }
+                   final = rows.concat(JSON.stringify(results[i]).substring(0) + "]");
+              }
+
+              var response = JSON.parse('{' +
+                  '"text":' + final + ',' +
+                  '"count":' + '"' + results.length + '"' +
+                  '}');
+
+              console.log(response);
+              io.emit(target, response);
 
 
           }

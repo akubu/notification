@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
@@ -12,7 +13,9 @@ class user extends Controller
     public function index()
     {
         $username=Auth::user()->email;
-        return view('userHome',compact('username'));
+        $not=Notification::where('uid_target','=',$username)->where('status','=','un_read')->get();
+//        dd($not[0]->message);
+        return view('userHome',compact('username','not'));
     }
 
     public function listen()

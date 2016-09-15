@@ -29,6 +29,7 @@ Route::get('/loginNotification','notifications@onLogin');
 
 
 Route::get('/userHome','user@index');
+Route::get('getNotification','notifications@getNotification');
 
 Route::group(['middleware' => 'auth'], function()
 {

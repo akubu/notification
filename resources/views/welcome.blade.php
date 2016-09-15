@@ -53,7 +53,7 @@
                 {{--<div class="title">Laravel 5</div>--}}
             </div>
             <span>
-               @yield('error');
+               @yield('error')
 
             </span>
         </div>
