@@ -121,15 +121,10 @@
 
     var userLists = new List('users', options);
 
-
-
-
-
-
-
     var socket = io.connect('http://localhost:8899');
     var username="<?php echo $username ?>";
     socket.on(username,function(response){
+        userLists.clear();
         alert(response.text[response.count-1].message);
         var i;
         for(i=0;i<response.count;i++) {
