@@ -1,0 +1,125 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+	overflow-x: hidden;
+}
+/* Toggle Styles */
+
+#wrapper {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+#wrapper.toggled {
+	padding-left: 270px;
+}
+#sidebar-wrapper {
+	position: fixed;
+	left: 270px;
+	width: 270px;
+	height: 100%;
+	margin-left: -270px;
+	overflow-y: auto;
+	background: #333;/*
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	display:block;
+	 -webkit-transition-delay: 0.5s; 
+  
+    transition-delay: 0.5s;*/
+	visibility: visible;
+	transition: visibility 0.5s linear;
+}
+#wrapper.toggled #sidebar-wrapper {
+	width: 270px;
+	/*display:none;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	 -webkit-transition-delay: 0.5s;
+	 transition-delay: 0.5s;*/
+	visibility: hidden;
+	transition: visibility 0.5s linear;
+}
+#page-content-wrapper {
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+#wrapper.toggled #page-content-wrapper {
+	position: absolute;
+}
+#wrapper.shifter #page-content-wrapper {
+	transform: translate(270px);
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+/* Sidebar Styles */
+
+.sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 270px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+.sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+.sidebar-nav li a:hover {
+	text-decoration: none;
+	color: white;
+	background: black;
+}
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+	text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand {
+	height: 65px;
+	font-size: 18px;
+	line-height: 60px;
+}
+
+@media(min-width:768px) {
+#wrapper {
+}
+#wrapper.toggled {
+	padding-left: 0;
+}
+#sidebar-wrapper {
+	width: 270px;
+}
+#wrapper.toggled #sidebar-wrapper {
+	width: 0;
+}
+#page-content-wrapper {
+	padding: 0px;
+	position: relative;
+}
+#wrapper.toggled #page-content-wrapper {
+	position: relative;
+	margin-right: 0;
+}
+}

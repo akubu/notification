@@ -55,6 +55,7 @@
 <body id="body">
 {{--{{$not[0]->message}}--}}
 <div>
+
 <ul >
     <li><a>{{$username}}'s Home Page</a></li>
     <li><a href="/logout">Logout</a></li>
@@ -92,7 +93,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script><!--script src="js/main.js"></script-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.js"></script><!--script src="js/main.js"></script-->
 <script src="http://listjs.com/no-cdn/list.pagination.js"></script>
 
 <script>
@@ -159,7 +160,6 @@
         $.get("/clearNotification", function (data, status) {
             $('#n').html('Notification count: 0');
             $('#not').css("background-color",'grey');
-
             $('#table_div').show();
         });
 

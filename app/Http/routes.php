@@ -23,11 +23,7 @@ Route::get('/welcomeError', function () {
 
 Route::get('/clearNotification','notifications@clearNotification');
 Route::get('/logout','Auth\AuthController@logout');
-
-
 Route::get('/loginNotification','notifications@onLogin');
-
-
 Route::get('/userHome','user@index');
 Route::get('getNotification','notifications@getNotification');
 

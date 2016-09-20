@@ -15,7 +15,7 @@ class user extends Controller
         $username=Auth::user()->email;
         $not=Notification::where('uid_target','=',$username)->where('status','=','un_read')->get();
 //        dd($not[0]->message);
-        return view('userHome',compact('username','not'));
+        return view('dashboard',compact('username','not'));
     }
 
     public function listen()
