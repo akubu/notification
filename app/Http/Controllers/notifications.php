@@ -67,6 +67,7 @@ class notifications extends Controller
 
         $ch = curl_init();
 
+        
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLINFO_HEADER_OUT, true);
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
@@ -78,7 +79,7 @@ class notifications extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $result = curl_exec($ch);
-//        dd($result);
+        //dd($result);
 
         curl_close($ch);
 
@@ -91,7 +92,7 @@ class notifications extends Controller
         }
 
     }
-    public function master($message)
+    public function masterNode($message)
     {
         foreach ($message['uid_target'] as $target) {
             $new=new Notification();
@@ -104,17 +105,17 @@ class notifications extends Controller
         $redis = Redis::connection();
         $json=json_encode($message);
         $redis->publish('m', $json);
-        $data = array("method" => "enqueue", "payload" => "<payload><object>order</object><event>dc registered</event><object_id></object_id><customer><email_id>akshay.singh@power2sme.com</email_id><mobile_no>7838388154</mobile_no></customer><name>asdad</name><so_number>asdasdasd</so_number><dc_number>asdasda</dc_number></payload>");
-        $this->sendNotification($data);
+
     }
     
     public function getNotification()
     {
         $user=Auth::user()->email;
         $not=Notification::where('uid_target','=',$user)->where('status','=','un_read')->get();
-        $json=\GuzzleHttp\json_encode($not);
+        $json=json_encode($not);
         return $json;
     }
+
     public function clearNotification()
     {
         $user=Auth::user()->email;
@@ -137,7 +138,9 @@ class notifications extends Controller
 
         //event(new notifications($n));
         
-        $this->master($message);
+        $this->masterNode($message);
+        $data = array("method" => "enqueue", "payload" => "<payload><object>order</object><event>dc registered</event><object_id></object_id><customer><email_id>akshay.singh@power2sme.com</email_id></customer><name>asdad</name><so_number>asdasdasd</so_number><dc_number>asdasda</dc_number></payload>");
+//        $this->sendNotification($data);
         return redirect('/userHome');
 
     }

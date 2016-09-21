@@ -221,6 +221,12 @@
 <script>
   //My backend scripts
 
+  $("#fromdate").change(function() {
+    if($('#todate').val()!='')
+    console.log($(this).val());
+  });
+
+
   $('#document').ready(function () {
     $.get("/getNotification", function (data, status) {
       var json=JSON.parse(data);

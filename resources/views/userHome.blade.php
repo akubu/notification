@@ -150,7 +150,7 @@
 
         $.get("/sendMessage?text=" + text, function (data, status) {
 
-});
+        });
 
         return true;
     });
