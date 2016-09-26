@@ -49,15 +49,14 @@ MAIN CONTENT
                 <button id="login" class="btn btn-theme btn-block" href="dashboard.jsp" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
                 <div class="hide" style="text-align: center;"><img src="/images/ajax-loader.gif" /></div>
                 <hr>
-                <a href='social/redirect/google' class="btn btn-block btn-social btn-google">
-                    <span class="fa fa-google"></span>
-                    Sign in with Google
+                <a href='social/redirect/google' class="btn btn-block btn-social btn-google" style="text-align: center">
+                    <span class="fa fa-google" ></span>
+                    Sign in using Google
+
                 </a>
 
             </div>
-               <span style="display: block; text-align: center">
-                    @yield('error')
-               </span>
+
         </form>
     </div>
 </div>
