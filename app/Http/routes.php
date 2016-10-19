@@ -19,7 +19,9 @@ Route::group(['middleware' => 'redirect'], function() {
 
 Route::post('/auth/vtiger/user', 'Auth\AuthController@validateVtigerUser');
 
-
+Route::get('/test',function (){
+   return view('test'); 
+});
 Route::get('/welcomeError', function () {
     return view('welcomeError');
 });
@@ -34,7 +36,7 @@ Route::group(['middleware' => 'auth'], function()
 {
     Route::post('/upload','user@upload');
     Route::get('/sendMessage','SocketController@sendMessage');
-    Route::get('/test','user@listen');
+//    Route::get('/test','user@listen');
 
 });
 

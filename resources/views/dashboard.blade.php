@@ -1,6 +1,9 @@
 <?php
+
         use Illuminate\Support\Facades\Auth;
         use App\Models\Notification;
+//        echo file_get_contents(Auth::user()->avatar);
+//echo "<img src='data:image/png;base64," . base64_encode(file_get_contents(Auth::user()->avatar)) . "'>";
 ?>
 
 <!doctype html>
@@ -22,7 +25,8 @@
   
   <!-- Sidebar -->
   <div id="sidebar-wrapper" >
-    <div class="profile"><img src="images/dp.png" alt="display-pic"><span><?php echo Auth::user()->email?></span></div>
+    <div class="profile"><?php echo "<img src='data:image/png;base64," . base64_encode(file_get_contents(Auth::user()->avatar)) . "'>"; ?>
+      " alt="display-pic"><span><?php echo Auth::user()->email?></span></div>
     <ul class="sidebar-nav">
       <li> <a href="#">OFS</a> </li>
       <li> <a href="#">Document Management System</a> </li>
@@ -129,7 +133,6 @@
           </div>
         </div>
         <!--panel Header-->
-        
         <div class="panelContent">
           <div class="row">
             <div class="col-md-3 paddingRight10">

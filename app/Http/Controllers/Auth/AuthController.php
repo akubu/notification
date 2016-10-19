@@ -76,7 +76,7 @@ class AuthController extends Controller
     {
         $providerKey = \Config::get('services.' . $provider);
         if(empty($providerKey))
-            return view('pages.status')
+            return view('pages.status') //needs to be changed
                 ->with('error','No such provider');
 
         return Socialite::driver( $provider )->redirect();
@@ -86,6 +86,8 @@ class AuthController extends Controller
     public function getSocialHandle( $provider )
     {
         $user = Socialite::driver( $provider )->user();
+        $avatar=$user->getAvatar();
+//        dd(file_get_contents($avatar));
         $flag=0;
         foreach (Models\Employee::all() as $e)
         {
@@ -103,7 +105,11 @@ class AuthController extends Controller
         $userCheck = User::where('email', '=', $user->email)->first();
         if(!empty($userCheck))
         {
-            $socialUser = $userCheck;
+            User::where('email', '=', $user->email)->update(['avatar'=> $avatar]);
+//            $change->avatar=$user->getAvatar();
+//            $change->save();
+            $socialUser = User::where('email', '=', $user->email)->first();
+
         }
         else
         {
@@ -116,6 +122,7 @@ class AuthController extends Controller
                 $newSocialUser->email              = $user->email;
                 //$name = explode(' ', $user->name);
                 $newSocialUser->name         = $user->name;
+                $newSocialUser->avatar=$avatar;
                 //$newSocialUser->last_name          = $name[1];
                 $newSocialUser->save();
 
@@ -152,7 +159,7 @@ class AuthController extends Controller
         $data = array('userId' => $request->input('username'),
             'password' => $request->input('password'));
 
-
+        
         //make curl request to validate user
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
