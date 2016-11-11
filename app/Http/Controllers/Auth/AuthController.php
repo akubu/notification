@@ -208,8 +208,8 @@ class AuthController extends Controller
 
             $newSocialUser = new User;
             $username=$request->input('username');
-            $email=Models\Employee::where('emp_code','=',$username)->pluck('email');
-            $name=Models\Employee::where('emp_code','=',$username)->pluck('name');
+            $email=Models\Employee::where('emp_code','=',$username)->pluck('email')->first();
+            $name=Models\Employee::where('emp_code','=',$username)->pluck('name')->first();
             $userCheck = User::where('email', '=', $email)->first();
             if(!empty($userCheck))
             {
