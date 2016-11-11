@@ -2,8 +2,8 @@
 
         use Illuminate\Support\Facades\Auth;
         use App\Models\Notification;
+        use App\Models\User;
 //        echo file_get_contents(Auth::user()->avatar);
-//echo "<img src='data:image/png;base64," . base64_encode(file_get_contents(Auth::user()->avatar)) . "'>";
 ?>
 
 <!doctype html>
@@ -25,8 +25,15 @@
   
   <!-- Sidebar -->
   <div id="sidebar-wrapper" >
+    <?php
+    $email=Auth::user()->email;
+    if(User::where('email','=',$email)->pluck('avatar')->first()!=''){ ?>
     <div class="profile"><?php echo "<img src='data:image/png;base64," . base64_encode(file_get_contents(Auth::user()->avatar)) . "'>"; ?>
-      " alt="display-pic"><span><?php echo Auth::user()->email?></span></div>
+ <?php }
+      else {?>
+      <div class="profile"><img src='images/dp.png'>
+<?php } ?>
+        <span><?php echo Auth::user()->email?></span></div>
     <ul class="sidebar-nav">
       <li> <a href="#">OFS</a> </li>
       <li> <a href="#">Document Management System</a> </li>
@@ -188,7 +195,20 @@
 <script src="js/jquery.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/main.js"></script> 
-<script src="js/jquery.datetimepicker.js"></script> 
+<script src="js/jquery.datetimepicker.js"></script>
+
+{{--<script src="//js.pusher.com/3.2/pusher.min.js"></script>--}}
+
+{{--<script>--}}
+  {{--var pusher = new Pusher('582b4b7ee0d26b51099d');--}}
+  {{--var channel = pusher.subscribe('my-channel');--}}
+  {{--channel.bind('my-event', function(data) {--}}
+    {{--alert('An event was triggered with message: ' + data.message);--}}
+  {{--});--}}
+
+{{--</script>--}}
+
+
 <script type="text/javascript">
 
 		$(document).ready(function(){
