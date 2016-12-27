@@ -17,6 +17,10 @@ Route::group(['middleware' => 'redirect'], function() {
     });
 });
 
+Route::get('/react-native','reactNative@insert');
+Route::get('/react-native/get','reactNative@getNotes');
+Route::get('/react-native/delete','reactNative@delete');
+
 Route::post('/auth/vtiger/user', 'Auth\AuthController@validateVtigerUser');
 
 Route::get('/test',function (){

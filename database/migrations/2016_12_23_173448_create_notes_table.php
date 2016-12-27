@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TaxCategory extends Migration
+class CreateNotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,23 +12,18 @@ class TaxCategory extends Migration
      */
     public function up()
     {
-        Schema::create('tax_category', function (Blueprint $table) {
+        Schema::create('notes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('taxes');
-            $table->string('category');
+            $table->string('title');
+            $table->string('text');
             $table->timestamps();
-            //
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+
     public function down()
     {
-        Schema::drop('tax_category');
+        Schema::drop('notes');
         //
     }
 }
