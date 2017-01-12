@@ -37,4 +37,10 @@ class reactNative extends Controller
         return(\GuzzleHttp\json_encode(Note::all()));
     }
 
+    public function upload(Request $request)
+    {
+        $file=Input::file('file');
+        return $file->move('uploads',$file->getClientOriginalName());
+    }
+
 }
