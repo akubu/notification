@@ -148,7 +148,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+//        Dawson\Youtube\YoutubeServiceProvider::class,
         Alaouy\Youtube\YoutubeServiceProvider::class ,
+
         /*
          * Application Service Providers...
          */
@@ -171,7 +173,7 @@ return [
     */
 
     'aliases' => [
-
+//        'Youtube' => Dawson\Youtube\YoutubeFacade::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,

@@ -18,9 +18,7 @@ Route::group(['middleware' => 'redirect'], function() {
 });
 
 //new
-Route::get('/upload',function (){
-    return view('fileUpload');
-});
+
 Route::post('/videoUpload','reactNative@upload');
 Route::get('/react-native','reactNative@insert');
 Route::get('/react-native/get','reactNative@getNotes');
