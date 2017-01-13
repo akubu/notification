@@ -16,11 +16,20 @@
             <input type="submit" value="Upload" name="submit">
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
         </form>
-        <video width="320" height="240" controls>
-            <source src="uploads/sherlock.mp4" type="video/mp4">
+        <div style="overflow-x:auto ; height: 400px;">
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
+            <iframe style="padding: 10px" width="560" height="315" src="https://www.youtube.com/embed/kw4tT7SCmaY" frameborder="0" allowfullscreen></iframe>
 
-            Your browser does not support the video tag.
-        </video>
+        </div>
     </div>
 </div>
 </body>
