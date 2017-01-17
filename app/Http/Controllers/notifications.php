@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -116,6 +117,14 @@ class notifications extends Controller
         return $json;
     }
 
+    public function getAllNotification()
+    {
+        $user=Auth::user()->email;
+        $not=Notification::where('uid_target','=',$user)->get();
+        $json=json_encode($not);
+        return $json;
+    }
+
     public function clearNotification()
     {
         $user=Auth::user()->email;
@@ -144,5 +153,18 @@ class notifications extends Controller
         return redirect('/userHome');
 
     }
-    //
+    public function dcCreatedNotification()
+    {
+        $uid_source=Auth::user()->email;
+        $name=Auth::user()->name;
+        $message="Dc Created by".$name;
+        $emails=Employee::pluck('email');
+        $uid_target=array();
+        foreach ($emails as $email){
+            array_push($uid_target,$email);
+        }
+        $message=array('type'=>'dc_created','message'=>$message,'uid_source'=>$uid_source,'raw_data'=>$message,'action_target_link'=>'','uid_target'=>$uid_target);
+        $this->masterNode($message);
+        echo "notification sent";
+    }
 }

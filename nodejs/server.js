@@ -9,7 +9,7 @@ server.listen(8899);
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'akshay',
-  password : 'abcd',
+  password : '12345678',
   database : 'notification'
 });
 

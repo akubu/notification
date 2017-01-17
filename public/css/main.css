@@ -57,6 +57,9 @@ a:hover {
 .poweredby a {
 	color: #fff;
 }
+input[type="text"]{
+	border:1px solid #999;}
+	label{font-weight:normal;}
 /*general css ends*/
 /*sidebar css*/
 #sidebar-wrapper .profile {
@@ -96,7 +99,7 @@ a:hover {
 	font-size: 22px;
 	margin-left: 20px;
 }
-.ofs_dashboard .top_bar .ofs_heading {
+.ofs_dashboard .top_bar .ofs_heading,.managePage .searchFilter .blueButton  {
 	display: inline;
 }
 .ofs_dashboard .top_bar .ofs_heading span {
@@ -112,6 +115,7 @@ a:hover {
 	color: white;
 	border-radius: 0;
 	border-right: 1px solid #197dbb;
+	border-left: 1px solid #197dbb;
 }
 .ofs_dashboard .top_bar .right_links .activeTopBar {
 	background-color: #187cba;
@@ -129,6 +133,7 @@ a:hover {
 	top: 61px;
 	width: 0;
 }
+.managePage .top_bar .right_links .triangle-down{ right: 48px;}
 .ofs_dashboard .top_bar .right_links .notifications {
 	color: #fff;
 	background: url(../images/ic-bell.png) right center no-repeat;
@@ -170,8 +175,9 @@ a:hover {
 	padding: 10px;
 	border-bottom: 1px solid #cfcfcf;
 }
-.ofs_dashboard .top_bar .right_links .dropdown {
+.ofs_dashboard .top_bar .right_links .dropdownManage ,.ofs_dashboard .top_bar .right_links .dropdown {
 	display: inline;
+	position:relative
 }
 .ofs_dashboard .top_bar .right_links .dropdown:hover .manageDropdownMenu {
 	display: block;
@@ -186,6 +192,7 @@ a:hover {
 	left: 26px;
 	z-index: 999;
 }
+
 /* top bar ends*/
 /* page Title*/
 .ofs_dashboard .pageTitle {
@@ -200,6 +207,15 @@ a:hover {
 	background: url(../images/dashboard_icon.png) no-repeat left center;
 	margin: 0;
 }
+.ofs_dashboard .pageTitle .title_icon_manage{
+	background:url(../images/ic-manage.png) no-repeat left center;
+	margin:0;}
+	.ofs_dashboard .pageTitle .title_icon_manageC{
+	background:url(../images/ic-manageC.png) no-repeat left center;
+	margin:0;}
+	.ofs_dashboard .pageTitle .title_icon_manage_doc{
+		background:url(../images/ic-manageDocs.png) no-repeat left center;
+	margin:0;}
 /* page Title ends*/
 /*date ranger*/
 .ofs_dashboard .dateRanger {
@@ -222,7 +238,7 @@ a:hover {
 }
 .ofs_dashboard .dateRanger .oneGroup .input-group input {
 	width: 105px;
-	color: #999;
+	color: #666;
 	padding: 4px;
 }
 .ofs_dashboard .dateRanger .oneGroup .calendar_icon {
@@ -385,3 +401,260 @@ a:hover {
 	color: #fff;
 	margin-top: 30px;
 }
+
+
+/*manage*/
+.managePage .searchFilter{
+margin: 0px 20px;
+padding-top:5px;
+padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;}
+.managePage .searchFilter .description{
+	font-size:14px;
+	color:#2a2a2a;
+	
+	margin:10px 0;}
+	.managePage .searchFilter .fields{padding:10px 0;}
+	.managePage .searchFilter .fields label{ font-size:14px; color:#666; margin:0; display:inline; margin-right:10px;}
+	.managePage .searchFilter .fields input{display:inline; width:150px;padding: 4px;
+    border: 1px solid #999;}
+.managePage .searchFilter .textCombo{display: inline;
+    margin-right: 20px;}
+	
+	 .searchFilter .blueButton button { background:url(../images/ic-search.png) no-repeat right center; background-color:#389fdf; color:#fff;outline: none;border: 1px solid #1b89cd;    padding: 4px 35px 4px 15px;background-position: 90%;}
+	/*table of manage*/
+	.managePage .table-responsive{padding:20px 0;}
+	.managePage .table-responsive .table{border-bottom: 1px solid #ddd; margin-bottom: 70px;}
+	.manageCPage .table-responsive .table{margin-bottom:20px;}
+
+ .managePage .table-responsive .table tr th,  .downDoc .table-responsive .table tr th{font-weight: normal; font-size: 12px; background:#f4f4f4; padding:20px;vertical-align: top;     color: black;    border-bottom: 0; }
+.managePage .table-responsive .table tr td, .downDoc .table-responsive .table tr td{    padding: 20px;font-size: 12px;color: #505050;border-bottom: 1px solid #e3e3e3;}
+.manageCPage .table-responsive .table tr td{ padding:10px 20px; vertical-align:middle;}
+.downDoc .table-responsive .table{margin-bottom:0;}
+.downDoc .table-responsive .table img{cursor:pointer;}
+
+.managePage .table-responsive .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th, .downDoc .table-responsive .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th { border-top:0;}
+.managePage .table-responsive .sorter{margin-left:10px; vertical-align:middle;}
+	
+	/*table of manage and manage docs ends*/
+	
+	
+	
+/*manage ends*/
+
+/*manage docs*/
+.manageDocs .pageTitle  .leftPart{padding:10px 15px; padding-left:0;}
+.manageDocs .pageTitle  .rightPart{ padding-right:0;}
+.manageDocs .pageTitle .row{padding-bottom: 20px;
+    border-bottom: 1px solid #ccc; margin:0;}
+
+.manageDocs .pageTitle  .leftPart label{font-size: 14px;
+    color: #2a2a2a;
+	margin-right:15px;}
+	.manageDocs .pageTitle  .leftPart  input[type="text"] {
+	display: inline;
+    width: 400px;
+    padding: 4px;
+    border: 1px solid #999;
+	margin-right:10px;
+	}
+	.manageDocs .pageTitle  .leftPart button{
+background-color: #389fdf;
+    color: #fff;
+    outline: none;
+    border: 1px solid #1b89cd;
+    padding: 4px 21px;
+	}
+	.manageDocs .pageTitle  .rightPart button{
+		background-color:#197dbb;
+		color: #fff;
+    outline: none;
+	padding: 4px 21px;
+	border:0;}
+	.manageDocs .pageTitle .rightPart .buttonBorder{    width: 85%;
+    margin-left: auto;
+    padding-left: 10px;
+    border-left: 1px solid #999;
+	padding:10px 0px;}
+	.manageDocs .salesOrder h3{font-size: 14px;
+    color: #2a2a2a;margin:0;padding: 10px 20px;}
+	.manageDocs .table-responsive {
+    padding: 10px 0;
+}
+
+/*upload buttons*/
+		.uploadLabelGreen {
+    background-color: #17c817;
+    border: 1px solid #0f950f;
+    
+    font-size: 12px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 2px;
+	margin-left: 5px;
+    outline: none;
+}
+.uploadLabelBlue{
+
+background-color: #389fdf;
+    border: 1px solid #1b89cd;
+	
+    font-size: 12px;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+	margin-left: 5px;
+	outline: none;
+	}
+
+.uploadLabel {
+    background-color: #999999;
+    border: 1px solid #898989;
+    
+    font-size: 12px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 2px;
+	outline:none;
+}
+.inputText {
+    border: 1px solid #898989;
+    padding: 5px 5px;
+    
+    font-size: 12px;
+    
+    color: #666666;
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.textField{display: inline-block; vertical-align:middle;}
+.uploadButton{    display: inline;
+    position: absolute;}
+.uploadButton span{margin:0 7px; display:none;}
+.inactiveGrey{color:#adadad; cursor:default;}
+.inactiveGreen{color:#77de77;cursor:default;}
+#smallCTA1{cursor:pointer;}
+/*upload buttons ends*/
+.manageDocs .salesOrder{padding-bottom:10px;}
+.manageDocs .salesOrder .redMessage{color:#ff0000;}	
+.manageDocs .salesOrder .addNewDoc{margin:0 20px;padding-bottom: 35px;border-bottom: 1px solid #ccc;}
+.manageDocs .salesOrder .addNewDoc>a{ color:#666; text-decoration:underline; font-size:12px; cursor:pointer;}	
+.manageDocs .salesOrder .addNewDoc img{ margin-left:10px;}	
+.manageDocs .salesOrder .table-responsive .table{margin-bottom:5px;}
+.manageDocs .salesOrder .newDocPanel{padding: 15px 10px;
+    background-color: #d5d5d5; display:none;}
+	.manageDocs .salesOrder .panelTrigger a{font-size: 12px;
+    color: #666666; cursor:pointer;}
+.manageDocs .dchallan .greyLinks, .manageDocs .dchallan .blueLinks{text-decoration:underline; cursor:pointer;    outline: none;}
+.manageDocs .dchallan .greyLinks{color:#505050;}
+.manageDocs .dchallan .blueLinks{color:#197dbb; margin-left:5px;}
+/*dropdown*/
+
+.newDocPanel select, .customSelect select {
+    padding:5px;
+    margin: 0;
+    background: #fff;
+    color:#5e6276;
+    border:1px solid #969697;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+	border-radius:0;
+	font-size: 12px;
+	width:145px;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .newDocPanel select, .customSelect select {padding-right:5px}
+}
+
+ .newDocPanel>label, .customSelect label{position:relative;  margin-bottom:0;font-weight:normal; vertical-align:middle; margin-right: 15px;}
+ .newDocPanel>label:after, .customSelect label:after  {
+        content: '\25bc';
+    font-size:11px; 
+	font-family:Montserrat-Regular;
+    color:#666;
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+   transform: rotate(0deg);
+    right: 8px;
+    top: 1px;
+    padding: 0px 0px 0px 7px;
+    border-left: 0;
+    position: absolute;
+    pointer-events: none;
+    line-height: 27px;
+}
+.newDocPanel>label:before, .customSelect label:before {
+content: '';
+    right: 6px;
+    top: 1px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+    background-color: white;}
+
+/*dropdown ends*/
+/* popups*/
+.generalModal  .modal-content{ border-radius:0; overflow:hidden; width:95%; margin:auto;}
+.generalModal .modal-title{    font-size: 14px;color: #666;}
+.generalModal .close{color: white;
+    background-color: #389fdf;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 0px 7px;
+    right:-12px;
+    border: 5px solid #eee;
+    position: inherit;
+    outline: none;
+    }
+	.generalModal .closeStyle{
+	      position: absolute;
+    height: 31px;
+    width: 24px;
+    background-color: #eee;
+    overflow: visible;
+    right: -20px;
+    top: -2px;}
+	.generalModal .closeCont{position: relative; margin-bottom:5px;}
+	.generalModal .modal-dialog{margin-top:100px;}
+	.uploadDoc .newDocPanel{margin-bottom:30px;}
+	.downDoc .modal-body{padding:0;}
+	.reqDoc .modal-content{width: 60%;}
+	.downDoc1 .modal-content{width:80%;}
+	
+/* popups ends*/
+/*manage docs ends*/
+/*manageC*/
+.manageCPage .table .greyLinks{ color:#505050; text-decoration:underline; margin-right:20px}
+.manageCPage .table .greyLinks img{ margin-right:10px;}
+.manageCPage .table .blueLinks{ color:#197dbb;text-decoration:underline; margin-right:20px;} 
+
+.manageCPage .excelExport{background-color: #187cba;
+    color: #fff;
+    padding: 10px;
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
+}
+/*manageC ends
+
+RMS IP for git - http://103.25.172.167:7979/scm-webapp-1.38/git/revenue_management_system
+
+*/
+

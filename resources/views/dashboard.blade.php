@@ -20,6 +20,7 @@
 <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">
 </head>
 
+
 <body>
 <div id="wrapper" class="toggled"> 
   
@@ -62,16 +63,16 @@
                   </ul>
                 </div>
                 <a class="btn" href="javascript:void(0)"> <span>REPORTS</span></a>
-                <div  class="dropdown"> <span id="counter" class="counter"><?php echo Notification::where('uid_target','=',$username)->where('status','=','un_read')->count() ?></span> <a class="notifications dropdown-toggle"  data-toggle="dropdown">Notifications</a>
+                <div id="clearNotification" class="dropdown"> <span id="counter" class="counter"><?php echo Notification::where('uid_target','=',$username)->where('status','=','un_read')->count() ?></span> <a class="notifications dropdown-toggle"  data-toggle="dropdown">Notifications</a>
 
                   <ul class="dropdown-menu customDropdownMenu list">
                     {{--<ul class="list"></ul>--}}
                     {{--<ul class="pagination"></ul>--}}
 
-                    <li><a href="javascript:void(0)">#17 Hard Copy Requests</a></li>
-                    <li><a href="javascript:void(0)">Delivery Challan</a></li>
-                    <li><a href="javascript:void(0)">Purchase Order</a></li>
-                    <li><a href="javascript:void(0)" style="background-color: #efeeee;">View All</a></li>
+                    <li><a href="javascript:void(0)"><span id="dc_created"><?php echo Notification::where('uid_target','=',$username)->where('type','=','dc_created')->where('status','=','un_read')->count() ?></span> DC Created</a></li>
+                    <li><a href="javascript:void(0)"><span id="shipments_late"><?php echo Notification::where('uid_target','=',$username)->where('type','=','shipments_late')->where('status','=','un_read')->count() ?></span> Shipments Late</a></li>
+                    <li><a href="javascript:void(0)"><span id="shipments_in_transit"><?php echo Notification::where('uid_target','=',$username)->where('type','=','shipments_in_transit')->where('status','=','un_read')->count() ?></span> Shipments in Transit</a></li>
+                    <li><a href="manageNotifications" style="background-color: #efeeee;">View All</a></li>
                   </ul>
                 </div>
                 <a class="welcome">Welcome <?php echo Auth::user()->name; ?></a> </div>
@@ -243,6 +244,12 @@
 
 <script>
   //My backend scripts
+  $('#clearNotification').click(function () {
+     $.get('clearNotification',function (data,status) {
+         console.log('Notifications cleared');
+     })
+      $('#counter').html('0');
+  });
 
   $("#fromdate").change(function() {
     if($('#todate').val()!='')
@@ -253,47 +260,36 @@
   $('#document').ready(function () {
     $.get("/getNotification", function (data, status) {
       var json=JSON.parse(data);
-//      json.forEach(function(value){
-//        userLists.add({
-//          notification:value.message,
-//          type: value.type,
-//          time: value.created_at
-//        });
-//
-//      })
-
     });
   });
-
-  var options = {
-    valueNames: [ 'notification', 'type','time' ],
-    item: '<li> <span class="notification"></span><span  class="type"></span> <span class="time"></span></li><br/>',
-    sort:'asc',
-    page:3,
-    plugins: [ ListPagination({}) ]
-  };
-
-//  var userLists = new List('users', options);
 
   var socket = io.connect('http://localhost:8899');
 
   var username="<?php echo $username ?>";
   socket.on(username,function(response){
-//    userLists.clear();
     console.log(response);
     alert(response.text[response.count-1].message);
     var i;
-//    for(i=0;i<response.count;i++) {
-//      userLists.add({
-//        'notification': response.text[i].message,
-//        'type': response.text[i].type,
-//        'time': response.text[i].created_at
-//      });
-//    }
-
+    var dc_count=0;
+    var shipments_late=0;
+    var shipments_in_transit=0;
+    for(i=0;i<response.count;i++) {
+        if(response.text[i].type=='dc_created'){
+            dc_count++;
+        }
+        else if(response.text[i].type=='shipments_late'){
+            shipments_late++;
+        }
+        else if(response.text[i].type=='shipments_in_transit'){
+            shipments_in_transit++;
+        }
+    }
+    $('#dc_created').html(dc_count);
+    $('#shipments_late').html(shipments_late);
+    $('#shipments_in_transit').html(shipments_in_transit);
     $('#counter').html(response.count);
-//    $('#not').css("background-color",'#333');
   });
+
 
 </script>
 

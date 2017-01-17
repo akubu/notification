@@ -17,6 +17,7 @@ Route::group(['middleware' => 'redirect'], function() {
     });
 });
 
+Route::get('/dcCreated','notifications@dcCreatedNotification'); //test
 Route::post('/auth/vtiger/user', 'Auth\AuthController@validateVtigerUser');
 
 Route::get('/test',function (){
@@ -26,11 +27,15 @@ Route::get('/welcomeError', function () {
     return view('welcomeError');
 });
 
+Route::get('/manageNotifications',function (){
+    return view('manageNotifications');
+});
 Route::get('/clearNotification','notifications@clearNotification');
 Route::get('/logout','Auth\AuthController@logout');
 Route::get('/loginNotification','notifications@onLogin');
 Route::get('/userHome','user@index');
 Route::get('getNotification','notifications@getNotification');
+Route::get('getAllNotification','notifications@getAllNotification');
 
 Route::group(['middleware' => 'auth'], function()
 {
