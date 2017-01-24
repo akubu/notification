@@ -4,7 +4,8 @@
 
 <html>
 <head>
-    <title>Laravel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anniversary</title>
 
     <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
     <script
@@ -79,7 +80,19 @@
 </script>
 
 <script>
-
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-52746336-1');ga('send','pageview');
+    var isCompleted = {};
+    function sampleCompleted(sampleName){
+        if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+            ga('send', 'event', 'WebCentralSample', sampleName, 'completed');
+            isCompleted[sampleName] = true;
+        }
+    }
 </script>
 </body>
 </html>
