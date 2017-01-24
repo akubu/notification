@@ -26,6 +26,7 @@ Route::get('/react-native/delete','reactNative@delete');
 Route::get('/youtube','youtubeController@index');
 /////////
 
+
 Route::post('/auth/vtiger/user', 'Auth\AuthController@validateVtigerUser');
 
 Route::get('/test',function (){
