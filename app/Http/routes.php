@@ -18,7 +18,10 @@ Route::group(['middleware' => 'redirect'], function() {
 });
 
 //new
-
+Route::post('saveTestimonials','reactNative@saveTestimonials');
+Route::get('testimonialTemplate',function (){
+   return view('testimonialTemplate');
+});
 Route::post('/videoUpload','reactNative@upload');
 Route::get('/react-native','reactNative@insert');
 Route::get('/react-native/get','reactNative@getNotes');

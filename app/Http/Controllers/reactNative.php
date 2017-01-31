@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\testimonial;
 use Illuminate\Http\Request;
 use App\Models\Note;
 
@@ -62,13 +63,23 @@ class reactNative extends Controller
         if(($request->file('fileToUpload')->move($destination,$filename)))
         {
             $status=1;
-            $message="Thank you, Your video will be posted shortly";
+            $message="Thank you, Your video will be posted shortly after review";
             $values=array('status'=>$status,'message'=>$message);
             return (json_encode($values));
         }
         $status=0;
         $message="Please contact Akshay if you see this";
         $values=array('status'=>$status,'message'=>$message);
+        return (json_encode($values));
+    }
+
+    public function saveTestimonials(Request $request)
+    {
+        $new=new testimonial();
+        $new->name=$request->name;
+        $new->text=$request->text;
+        $new->save();
+        $values=array('message'=>'Thank you, It will be posted shortly after review');
         return (json_encode($values));
     }
 

@@ -12,7 +12,8 @@
         "predis/predis": "~1.0",
         "elasticsearch/elasticsearch": "^2.2",
         "alaouy/youtube": "dev-master",
-        "dawson/youtube": "^1.1"
+        "dawson/youtube": "^1.1",
+        "softon/indipay": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
