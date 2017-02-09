@@ -18,6 +18,15 @@ Route::group(['middleware' => 'redirect'], function() {
 });
 
 //new
+Route::get('testimonials',function (){
+    return view('anniversary.testimonials');
+});
+Route::get('videos','youtubeController@index2');
+Route::get('getTestimonials','reactNative@getTestimonials');
+Route::get('uploadTemplate',function (){
+   return view('uploadTemplate');
+});
+Route::post('saveTestimonialsWithPhoto','reactNative@saveTestimonialsWithPhoto');
 Route::post('saveTestimonials','reactNative@saveTestimonials');
 Route::get('testimonialTemplate',function (){
    return view('testimonialTemplate');

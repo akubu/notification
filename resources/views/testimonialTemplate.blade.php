@@ -3,7 +3,7 @@
     <form ng-cloak>
 
             <div>
-                <img src="/images/facebook.png" style="width:100%;height:25%" />
+                <img src="/images/testimonial.png" style="width:100%;height:25%" />
             </div>
 
 
@@ -11,11 +11,15 @@
             <div class="md-dialog-content" style="display:flex; flex-direction: column">
                 <md-input-container>
                     <label>Your Name</label>
-                    <input ng-model="name">
+                    <input ng-model="name" required>
                 </md-input-container>
                 <md-input-container class="md-block">
-                    <label>Write about us</label>
-                    <textarea ng-model="text"  rows="10" md-select-on-focus></textarea>
+                    <label>Write about them</label>
+                    <textarea ng-model="text"  rows="1" md-select-on-focus required></textarea>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Upload your pic with them or click submit</label>
+                    <input ngf-select="upload($file)">
                 </md-input-container>
             </div>
         </md-dialog-content>
@@ -24,7 +28,7 @@
             <md-button ng-click="answer('submit')">
                 Submit
             </md-button>
-            <md-button ng-click="answer('cancel')">
+            <md-button ng-click="cancel()">
                 Cancel
             </md-button>
         </md-dialog-actions>

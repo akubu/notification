@@ -16,6 +16,8 @@ class TestimonialsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('text');
+            $table->binary('image');
+            $table->string('status');
             $table->timestamps();
         });
         //
