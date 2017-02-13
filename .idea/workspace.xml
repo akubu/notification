@@ -2,119 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e4a6a61-907b-4678-87f8-35dd2c57ac22" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/ethernet-cable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/ethernet-cable.sketch/Data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/ethernet-cable.sketch/QuickLook/Preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/ethernet-cable.sketch/QuickLook/Thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/ethernet-cable.sketch/fonts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/ethernet-cable@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro-top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro-top.sketch/Data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro-top.sketch/QuickLook/Preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro-top.sketch/QuickLook/Thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro-top.sketch/fonts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro-top@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro.sketch/Data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro.sketch/QuickLook/Preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro.sketch/QuickLook/Thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro.sketch/fonts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/img/tiny-image.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/CAM_IMG_1486389976052.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/IMG_20170208_174142.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Boxfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Boxfile.install" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/manifest.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/.hsdoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/Gruntfile.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/coffee/offline.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/coffee/reconnect.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/coffee/requests.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/coffee/simulate.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/coffee/snake.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/coffee/ui.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/ethernet-cable.sketch/version" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro-top.sketch/version" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/images/macbook-pro.sketch/version" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/docs/welcome/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/install.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/js/offline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/js/reconnect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/js/requests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/js/simulate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/js/snake.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/js/ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/offline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/offline.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_content.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_dutch.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_english.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_french.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_german.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_keyframes.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_mixins.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_offline-theme-base-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_offline-theme-base.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_portuguese-brazil.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/_spanish.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-dutch-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-dutch.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-english-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-english.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-french-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-french.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-german-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-german.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-portuguese-brazil-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-portuguese-brazil.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-spanish-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-language-spanish.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-chrome-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-chrome.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-dark-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-dark.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-default-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-default.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-hubspot.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-slide-indicator.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/sass/offline-theme-slide.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/test/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/test/snake.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-dutch-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-dutch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-english-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-english.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-french-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-french.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-german-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-german.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-portuguese-brazil-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-portuguese-brazil.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-spanish-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-language-spanish.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-chrome-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-chrome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-dark-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-default-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-hubspot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-slide-indicator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/offline/themes/offline-theme-slide.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/sherlock.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/videos/main.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/videos/upload.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/anniversary/main.js" afterPath="$PROJECT_DIR$/public/js/anniversary/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/anniversary/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/anniversary/dashboard.blade.php" />
     </list>
     <ignored path="notification.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -771,7 +659,7 @@
       <workItem from="1486012174089" duration="4405000" />
       <workItem from="1486195949690" duration="25652000" />
       <workItem from="1486533566500" duration="8672000" />
-      <workItem from="1486617363295" duration="29671000" />
+      <workItem from="1486617363295" duration="30653000" />
     </task>
     <task id="LOCAL-00001" summary="new event added">
       <created>1473145004838</created>
@@ -791,7 +679,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="555769000" />
+    <option name="totallyTimeSpent" value="556751000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
