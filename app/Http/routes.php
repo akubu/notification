@@ -35,7 +35,7 @@ Route::post('/videoUpload','reactNative@upload');
 Route::get('/react-native','reactNative@insert');
 Route::get('/react-native/get','reactNative@getNotes');
 Route::get('/react-native/delete','reactNative@delete');
-Route::get('/youtube','youtubeController@index');
+Route::get('/','youtubeController@index');
 /////////
 
 

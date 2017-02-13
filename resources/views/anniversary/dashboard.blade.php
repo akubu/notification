@@ -1,6 +1,9 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/images/upload.png">
+    <link rel="manifest" href="/manifest.json">
     <title>Anniversary</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
@@ -20,6 +23,9 @@
     <link href="/css/jquery.growl.css" rel="stylesheet" type="text/css" />
     <link href="/css/angularMaterial.css" rel="stylesheet" type="text/css" />
     <script src="http://malsup.github.com/jquery.form.js"></script>
+    {{--<script src="/offline/js/offline.js"></script>--}}
+    {{--<script src="/offline/js/snake.js"></script>--}}
+    {{--<link rel="stylesheet" type="text/css" href="/offline/themes/offline-language-english.css"></link>--}}
 </head>
 <body ng-app="MyApp">
 <div ng-controller="AppCtrl" ng-cloak>

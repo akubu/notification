@@ -54,7 +54,7 @@
                 };
 
                 $scope.upload=function(file){
-                    alert('asd');
+                   // alert('asd');
                     $('#gif').show();
                     console.log(file);
                     var fd=new FormData();
